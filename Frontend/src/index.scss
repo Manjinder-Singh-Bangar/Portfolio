@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 *{
     padding: 0;
@@ -8,7 +12,100 @@
 
 
 body{
-    font-family: "Poppins", serif;
-    background-color: rgb(231, 231, 231);
-    color: rgb(35, 35, 35);
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    font-family: "Fira Code", serif;
+    background-color: #011627;
+    overflow-x: hidden;
+    // color: #607B96;
 }
+
+#root{
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
+.green{
+    position: absolute;
+    width: 254px;
+    height: 292px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: #43D9AD;
+    opacity: 0.4;
+    filter: blur(87px);
+    transform: rotate(-94.3deg);
+}
+
+.blue{
+    position: absolute;
+    width: 254px;
+    height: 292px;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    background: #4D5BCE;
+    opacity: 0.4;
+    filter: blur(87px);
+    transform: rotate(13.51deg);
+}
+
+.background-gradient {
+    position: relative;
+    width: 510px;
+    height: 475px;
+    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+    border: 1px solid #0C1616;
+    box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(32px); // Requires browser support
+    border-radius: 8px;
+  }
+
+  .snake-game{
+    height: calc(100% - 76px);
+  }
+
+  .snake-game-height{
+    height: calc(100% - 76px);
+
+  }
+
+  .char{
+    perspective: 200px;
+  }
+
+
+  // Snake game
+
+  .row {
+    height: 35px;
+  }
+  
+  .cell {
+    width: 10px;
+    height: 10px;
+    z-index: 50;
+    /* outline: 1px solid rgb(134, 154, 189); */
+    display: inline-block;
+  }
+  
+  .cell-green {
+    background-image: url("../public/assets/Icons/snake-svg.svg");
+    background-position: center;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .cell-red {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../public/assets/Icons/snake-food.svg");
+  }
+  
+
