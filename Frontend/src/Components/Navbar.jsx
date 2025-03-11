@@ -31,7 +31,7 @@ const Navbar = () => {
             <NavLink to={""} className={({isActive}) => isActive ? `p-3 border-r-2 border-b-4 border-b-[#FEA55F] border-r-[#1E2D3D]` : `p-3 border-r-2 border-r-[#1E2D3D] `}>_hello</NavLink>
             <NavLink to={"about"} className={({isActive}) => isActive ? `p-3 border-r-2  border-b-4 border-b-[#FEA55F] border-r-[#1E2D3D]` : `p-3 border-r-2 border-r-[#1E2D3D] `}>_about</NavLink>
             <NavLink to={"projects"} className={({isActive}) => isActive ? `p-3 border-r-2 border-b-4 border-b-[#FEA55F] border-r-[#1E2D3D]` : `p-3 border-r-2 border-r-[#1E2D3D] `}>_projects</NavLink>
-          
+            <NavLink to={"blogs"} className={({isActive}) => isActive ? `p-3 border-r-2 border-b-4 border-b-[#FEA55F] border-r-[#1E2D3D]` : `p-3 border-r-2 border-r-[#1E2D3D] `}>_blogs</NavLink>
         </ul>
         <NavLink to={"contact-me"} className={({isActive}) => isActive ? `p-3 border-l-2 border-[#1E2D3D] border-b-2 border-b-[#FEA55F]` : `p-3 border-l-2 border-l-[#1E2D3D] `}>_contact-me</NavLink>
     </nav>

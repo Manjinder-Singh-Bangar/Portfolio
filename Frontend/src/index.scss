@@ -62,50 +62,106 @@ body{
     box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(32px); // Requires browser support
     border-radius: 8px;
-  }
+}
 
-  .snake-game{
-    height: calc(100% - 76px);
-  }
+.snake-game{
+  height: calc(100% - 76px);
+}
 
-  .snake-game-height{
-    height: calc(100% - 76px);
+.snake-game-height{
+  height: calc(100% - 76px);
 
-  }
+}
 
-  .char{
-    perspective: 200px;
-  }
+.char{
+  perspective: 200px;
+}
 
 
-  // Snake game
+// Snake game
 
-  .row {
-    height: 35px;
-  }
-  
-  .cell {
-    width: 10px;
-    height: 10px;
-    z-index: 50;
-    /* outline: 1px solid rgb(134, 154, 189); */
-    display: inline-block;
-  }
-  
-  .cell-green {
-    background-image: url("../public/assets/Icons/snake-svg.svg");
-    background-position: center;
-    width: 10px;
-    height: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .cell-red {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../public/assets/Icons/snake-food.svg");
-  }
-  
+.row {
+  height: 35px;
+}
 
+.cell {
+  width: 10px;
+  height: 10px;
+  z-index: 50;
+  /* outline: 1px solid rgb(134, 154, 189); */
+  display: inline-block;
+}
+
+.cell-green {
+  background-image: url("../public/assets/Icons/snake-svg.svg");
+  background-position: center;
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cell-red {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../public/assets/Icons/snake-food.svg");
+}
+
+.line{
+  opacity: 0;
+}
+
+#star{
+  fill: white;
+}
+
+
+html {
+  scroll-snap-type: y mandatory;
+  timeline-scope: --section, --main, --site-header;
+}
+
+
+
+main {
+  view-timeline: --main;
+}
+
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  view-timeline: --section;
+  height: calc(100vh - 104.2px);
+}
+
+.content {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  --contrast: 4;
+  --blur: 0.5rem;
+  animation: blink ease-in-out both;
+  animation-timeline: --section;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    filter: blur(var(--blur)) contrast(var(--contrast));
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    filter: blur(0) contrast(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}

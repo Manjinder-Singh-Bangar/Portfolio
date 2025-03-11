@@ -192,7 +192,9 @@ const Board = ({foodEatenCount, isGameOver}) => {
 
     useEffect(()=>{
         isGameOver(gameOver)
-        handleGameOver
+        const snakeLLStartingValue = getStartingSnakeLLValue(board);
+        console.log(snakeLLStartingValue)
+        setSnakeCells(new Set());
     },[gameOver])
 
     const handleGameOver = () =>{
@@ -201,10 +203,13 @@ const Board = ({foodEatenCount, isGameOver}) => {
         setFoodEaten([])
         setFood(10);
         const snakeLLStartingValue = getStartingSnakeLLValue(board);
-        setSnake(null);
+        setSnake(new LinkedList(snakeLLStartingValue));
         setFoodCell(snakeLLStartingValue.cell + 5)
-        setSnakeCells(new Set([]));
+        setSnakeCells(new Set());
         setDirection(Direction.RIGHT);
+        document.querySelectorAll(".cell-green").forEach(cell => {
+            cell.classList.remove("cell-green");
+        });
     };
 
     return (

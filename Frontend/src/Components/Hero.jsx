@@ -60,20 +60,30 @@ const customStyle = {
   },[])
   
   useEffect(() => {
-    const timeline = gsap.timeline({duration: 1});
-    timeline.from(".char", {
+    const timeLine = gsap.timeline({duration: 0.5})
+    timeLine.from(".char", {
       opacity: 0,
       scale: 0,
       y: 80,
       rotationX: 180,
-      transformOrigin: "0% 50% -50",
+      duration: 0.5,
+      transformOrigin: "0% 50% -50px",
       ease: "expo.in",
       stagger: 0.01,
     });
-    console.log(gameRef.current)
-    
-    timeline.to(gameRef.current, {
+
+    timeLine.to("#projectsLink", {
       opacity: 1,
+      rotation: 0,
+      scale: 1,
+      y:0,
+      ease: "bounce.in",
+      duration: 0.4,
+    })
+    
+    gsap.to(gameRef.current, {
+      opacity: 1,
+      duration: 1,
       ease: "expo.in",
       duration: 0.8,
 
@@ -117,6 +127,15 @@ const customStyle = {
 
   useEffect(() =>{  
     setFoodConsumed([])
+    // const snake = document.querySelectorAll(".cell-green")
+    // if(snake){
+    //   snake.forEach((item) => {
+    //     item.classList.remove("cell-green")
+        
+    //   })
+      
+
+    // }
     if(foodParentRef.current && foodParentRef.current.childNodes){
       foodParentRef.current.childNodes.forEach((item) =>{
         item.style.opacity = "1"
@@ -131,7 +150,6 @@ const customStyle = {
     if(foodConsumed.length !== 0){
       console.log(foodConsumed.length)
       const foodIndex = foodConsumed.length - 1; // Assuming 0-based index
-
         // console.log(foodIndex)
       if (foodIndex < foodParentRef.current.childNodes.length) {
         foodParentRef.current.childNodes[foodIndex].style.opacity = "0.5";
@@ -142,7 +160,7 @@ const customStyle = {
   },[foodConsumed])
 
   return (
-    <main className='w-full gap-[-8px] max-h-fit flex items-center overflow-hidden min-h-[90vh]'>
+    <main className='w-full gap-[-8px] flex items-center overflow-hidden h-[calc(100vh-104.2px)]'>
       <div className='relative flex gap-10 w-full flex-1 justify-center h-full p-6 items-center'>
         <div className='text-[#607B96] w-full flex-wrap flex flex-col gap-5'>
           <div className='flex flex-col gap-0 items-end'>
@@ -160,6 +178,9 @@ const customStyle = {
               <span className='text-white text'>=</span>
               <Link to={"https://github.com/Manjinder-Singh-Bangar"} className='text-[#E99287] text'>https://github.com/Manjinder-Singh-Bangar</Link>
             </p>
+            <div className='py-6'>
+              <Link id='projectsLink' className='bg-[#FEA55F] opacity-0 scale-0 rotate-180 cursor-pointer text-black px-3 py-2 rounded-md hover:bg-transparent hover:text-[#FEA55F] transition-all hover:border-[#FEA55F] hover:border-[1px]' to={"projects"}>_viewProjects</Link>
+            </div>
           </div>
         </div>
         
