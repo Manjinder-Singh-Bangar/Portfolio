@@ -83,7 +83,6 @@ const customStyle = {
     
     gsap.to(gameRef.current, {
       opacity: 1,
-      duration: 1,
       ease: "expo.in",
       duration: 0.8,
 
