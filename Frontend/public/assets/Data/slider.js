@@ -1,4 +1,4 @@
-import codeTogetherImageSrc from "../Images/CodeTogether.jpg"
+import codeTogetherImageSrc from "../Images/codeTogether.jpg"
 import typingMania from "../Images/typingMania.png"
 import execuConnect from "../Images/ExecuConnect.png"
 
