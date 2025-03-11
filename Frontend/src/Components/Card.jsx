@@ -10,7 +10,7 @@ const Card = ({ projectsArr }) => {
           return (
           <section id="snapping" className="section">
             <div key={item.id} className="content flex flex-col justify-center items-center w-fit h-full">
-              <div className="text overflow-hidden flex gap-6 w-[100%]  p-5 h-fit">
+              <div className="text-container overflow-hidden flex gap-6 w-[100%]  p-5 h-fit">
                 <img
                   className="w-[50%] relative rounded-lg"
                   src={item.imgSrc}
