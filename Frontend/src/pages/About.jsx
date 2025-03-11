@@ -8,7 +8,7 @@ import educationSvgSrc from "../../public/assets/Icons/education-icon.svg"
 import ReadMe from '../Components/ReadMe.jsx'
 import gsap from 'gsap'
 import { aboutMe, collegeInfo, hobbies, schoolInfo } from '../utils/About-data.js'
-import CodeSnippet from '../Components/codeSnippet.jsx'
+import CodeSnippet from '../Components/CodeSnippet.jsx'
 import { linkContent } from '../../public/assets/Data/about'
 import mailIconSvgSrc from "../../public/assets/Icons/mail-icon.svg"
 import telephoneIconSvgSrc from "../../public/assets/Icons/telephone-icon.svg"
