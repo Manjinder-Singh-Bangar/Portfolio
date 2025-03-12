@@ -165,3 +165,16 @@ main {
     color: white;
     
 }
+
+.code-container {
+
+  pre{
+
+    code{
+      display: inline-block;
+      width: 500px;
+      overflow: inherit;
+      background: transparent;
+    }
+  }
+}
