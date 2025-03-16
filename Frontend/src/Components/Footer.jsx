@@ -23,7 +23,6 @@ const Footer = () => {
           trigger: footerRef.current,
           start: "top 97%",
           end: "top 99%",
-         
         },
         ease: "power1.inOut"
       }

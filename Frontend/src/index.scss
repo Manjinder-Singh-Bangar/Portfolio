@@ -64,6 +64,10 @@ body{
     border-radius: 8px;
 }
 
+ol li{
+  list-style: decimal;
+}
+
 .snake-game{
   height: calc(100% - 76px);
 }
@@ -177,4 +181,133 @@ main {
       background: transparent;
     }
   }
+}
+
+.markdown-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Headings */
+.markdown-container h1 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.markdown-container h2 {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.markdown-container p {
+  margin: 10px 0;
+}
+
+/* Links */
+.markdown-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.markdown-container a:hover {
+  text-decoration: underline;
+}
+
+/* Code Blocks */
+.markdown-container pre {
+  background: #282c34;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.markdown-container code {
+  font-family: "Courier New", monospace;
+  background: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.code-block {
+  position: relative;
+  background-color: #282c34;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #FEA55F;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.copy-btn:hover {
+  background-color: #6b4528;
+}
+
+// Define color variables for easy customization
+$bg-color: #011221;
+$btn-bg: #FEA55F;
+$btn-hover-bg: #6b4528;
+$btn-text-color: white;
+
+.code-block {
+  position: relative;
+  background-color: $bg-color;
+  border-radius: 5px;
+  padding: 10px;
+
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: $btn-bg;
+    color: $btn-text-color;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: $btn-hover-bg;
+    }
+  }
+}
+
+ul li{
+  list-style-type: disc;
+}
+
+
+.blogContent ul{
+  margin-left: 20px;
+}
+
+.blogContent ol{
+  margin-left: 30px;
+}
+
+code{
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.blogContent > * {
+  opacity: 0;
 }
