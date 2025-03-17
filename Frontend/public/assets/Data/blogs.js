@@ -1,6 +1,14 @@
 import authBlogData from "./auth-blog.md?raw"
+import codeTogetherData from "./codeTogetherBlog.md?raw"
+import execuConnectData from "./execuConnect-blog.md?raw"
+import typingManiaData from "./typing-mania-blog.md?raw"
 import myImageSrc from "../Images/myImage.jpg"
 import reactAuthThumbnail from "../Images/lock.jpg"
+import jwtBlogData from "./jwt-blog.md?raw"
+import jwtLogoThumbnail from "../Images/Jwt-logo.png"
+import codeTogetherLogo from "../Images/codeTogetherLogo.png"
+import typingManiaThumbnail from "../Images/TypingManiaLogo.png"
+import ExecuConnectLogoThumbnail from "../Images/ExecuConnectLogo.png"
 
 const blogs = [
     {
@@ -15,8 +23,50 @@ const blogs = [
         thumbnail: reactAuthThumbnail
     },
     {
-
+        id: 2,
+        headingOfBlog: "Understanding JSON Web Tokens (JWT): From Basics to Intermediate",
+        author: "Manjinder Singh",
+        dateWritten: "March 16, 2025",
+        profilePicture: myImageSrc,
+        fileName: jwtBlogData,
+        job: "Full stack developer",
+        location: "Toronto",
+        thumbnail:jwtLogoThumbnail
+    },
+    {
+        id: 3,
+        headingOfBlog: "CodeTogether - A Social Platform for Developers",
+        author: "Manjinder Singh",
+        dateWritten: "March 16, 2025",
+        profilePicture: myImageSrc,
+        fileName: codeTogetherData,
+        job: "Full stack developer",
+        location: "Toronto",
+        thumbnail: codeTogetherLogo
+    },
+    {
+        id: 4,
+        headingOfBlog: "Typing Mania - A Fun Typing Speed Test Platform",
+        author: "Manjinder Singh",
+        dateWritten: "March 16, 2025",
+        profilePicture: myImageSrc,
+        fileName: typingManiaData,
+        job: "Full stack developer",
+        location: "Toronto",
+        thumbnail: typingManiaThumbnail
+    },
+    {
+        id: 5,
+        headingOfBlog: "Executive Networking Platform",
+        author: "Manjinder Singh",
+        dateWritten: "March 16, 2025",
+        profilePicture: myImageSrc,
+        fileName: execuConnectData,
+        job: "Full stack developer",
+        location: "Toronto",
+        thumbnail: ExecuConnectLogoThumbnail
     }
+
 ]
 
 

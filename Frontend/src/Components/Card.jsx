@@ -23,7 +23,7 @@ const Card = ({ projectsArr }) => {
                   <p>
                     {item.body}
                   </p>
-                  <Link className="bg-[#FEA55F] w-fit p-2">_view_Source_Code</Link>
+                  <Link to={item.projectSrc} className="bg-[#FEA55F] w-fit p-2">_view_project_overview</Link>
                 </div>
               </div>
             </div>
