@@ -33,6 +33,16 @@ const Hero = () => {
   const [foodConsumed, setFoodConsumed] = useState([])
   const foodParentRef = useRef()
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsGameSkipped(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup on unmount
+  }, []);
+
 const customStyle = {
   backgroundColor: "#010E1A",
   padding: "20px",
@@ -159,19 +169,19 @@ const customStyle = {
   },[foodConsumed])
 
   return (
-    <main className='w-full gap-[-8px] flex items-center overflow-hidden h-[calc(100vh-104.2px)]'>
-      <div className='relative flex gap-10 w-full flex-1 justify-center h-full p-6 items-center'>
+    <main className='w-full gap-[-8px] flex items-center lg:overflow-hidden min-h-[calc(100vh-104.2px)]'>
+      <div className='relative gap-10 xs:flex-col flex lg:flex-row w-full flex-1 justify-center h-full p-6 items-center'>
         <div className='text-[#607B96] w-full flex-wrap flex flex-col gap-5'>
-          <div className='flex flex-col gap-0 items-end'>
+          <div className='flex flex-col gap-0 lg:items-end xs:items-start'>
             <p className='text-[#E5E9F0] text text-[20px]'>Hello, I am</p>
             <h1 className='text-[#E5E9F0] text text-[42px]'>Manjinder Singh</h1>
             <h3 className='text-[#4D5BCE] text text-[24px]'>{"> Full Stack Developer"}</h3>
           </div>
 
-          <div className='flex flex-col items-end'>
+          <div className='flex flex-col lg:items-end xs:items-start'>
             <p className='text-[#607B96] text'>// complete the game to continue</p>
             <p className='text-[#607B96] text'>// you can also skip it if you do not want to play</p>
-            <p className='flex gap-3 flex-wrap justify-end'>
+            <p className='flex gap-3 flex-wrap xs:justify-start lg:justify-end'>
               <span className='text-[#4D5BCE] text'>const</span>
               <span className='text-[#43D9AD] text'>githubProfileLink</span>
               <span className='text-white text'>=</span>
@@ -183,7 +193,7 @@ const customStyle = {
           </div>
         </div>
         
-        <div className='relative flex justify-start w-full'>
+        <div className='lg:relative xs:absolute flex justify-start w-full'>
          <div ref={gameRef} className={`${!isGameSkipped ? "background-gradient" : ""} opacity-0 w-full`}>
          {!isGameSkipped ? <> <div className='flex justify-between p-2'>
               <img className='shadow-sm' src={screwSvgSrc} alt="screw" />
@@ -242,17 +252,17 @@ const customStyle = {
             </div></>
 
             : <div id='codeSnippet' className='relative h-fit'>
-            <div className='flex w-full top-[-300px] opacity-35 z-[-1] absolute rounded-md bg-[#010E1A] gap-0'>
+            <div className='flex xs:hidden lg:block w-full top-[-300px] opacity-35 z-[-1] absolute rounded-md bg-[#010E1A] gap-0'>
               <SyntaxHighlighter language="javascript" style={oneDark} customStyle={customStyle}>
                 {codeString}
               </SyntaxHighlighter>
             </div>
-            <div className='flex w-full rounded-md bg-[#010E1A] gap-0'>
+            <div className='flex xs:hidden lg:block w-full rounded-md bg-[#010E1A] gap-0'>
               <SyntaxHighlighter language="javascript" style={oneDark} customStyle={customStyle}>
                 {codeString}
               </SyntaxHighlighter>
             </div>
-            <div className='flex w-full bottom-[-300px] z-[-1] opacity-35 absolute rounded-md bg-[#010E1A] gap-0'>
+            <div className='flex xs:hidden lg:block w-full bottom-[-300px] z-[-1] opacity-35 absolute rounded-md bg-[#010E1A] gap-0'>
               <SyntaxHighlighter language="javascript" style={oneDark} customStyle={customStyle}>
                 {codeString}
               </SyntaxHighlighter>

@@ -6,11 +6,6 @@ const linkContent = [
         icon: detailsSvgSrc,
         text: "details",
         address: "/blogs",
-    },
-    {
-        icon: starSvgSrc,
-        text: "star",
-        address: "",
     }
 ]
 

@@ -34,7 +34,6 @@ const DetailedBlog = () => {
             <div className='flex flex-col h-full'>
                 <Link className='border-b-[1px] justify-self-start w-fit pb-1' to={"/blogs"}>Go back to blogs</Link>
                 <h1 className='text-[50px]'>Blog not found</h1>
-
             </div>
         </div>
         )

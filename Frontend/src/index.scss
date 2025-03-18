@@ -311,3 +311,11 @@ code{
 .blogContent > * {
   opacity: 0;
 }
+
+.mobileNavHidden{
+  position: absolute;
+  z-index: -1;
+  transition: all 400ms ease-in-out;
+  top: -580px;
+  opacity: 0;
+}

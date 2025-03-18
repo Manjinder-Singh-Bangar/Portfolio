@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Card = ({ projectsArr }) => {
  
   return (
-    <div className="max-h-fit min-h-[calc(100vh-104.2px)]">
+    <div className="max-h-fit  min-h-[calc(100vh-104.2px)]">
       {
         projectsArr.map((item,) => {
           return (

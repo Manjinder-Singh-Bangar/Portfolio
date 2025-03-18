@@ -108,8 +108,8 @@ export default ProtectedRoute;`
     }, [])
 
     return (
-        <section className='h-[calc(100vh-104.2px)] overflow-y-auto flex w-full text-[#607B96]'>
-            <div className='border-r-[1px] sticky top-0 box-border border-[#1E2D3D] w-[50%] h-full'>
+        <section className='h-[calc(100vh-104.2px)] overflow-x-hidden flex w-full text-[#607B96]'>
+            <div className='border-r-[1px] min-w-[265px] sticky top-0 box-border border-[#1E2D3D] max-w-[50%] h-full'>
                 <div className={` ${isPersonalInfoOpened ? "pb-6  gap-3 border-b-[1px]" : " gap-0 border-b-0 p-0"} transition-all flex-col h-fit flex border-[#1E2D3D]`}>
                     <button onClick={() => setIsPersonalInfoOpened((prev) => !prev)} className={`flex ${isPersonalInfoOpened ? "text-white" : ""} transition-all bg-[#011627] gap-3 z-10 text-[18px] w-full px-6 py-3 border-b-[1px] border-[#1E2D3D]`}><img className={`${isPersonalInfoOpened ? "rotate-0" : "rotate-[-90deg]"}`} src={arrowFilledSvgSrc} alt="" />personal-info</button>
                     <div className={`flex transition-all text-[16px] relative ${isPersonalInfoOpened ? "top-[0] opacity-1 z-0 h-fit" : "p-0 opacity-0 top-[-100px] h-0"} flex-col`}>
@@ -140,7 +140,7 @@ export default ProtectedRoute;`
 
             </div>
 
-            <div className='w-full border-r-[1px] border-[#1E2D3D] h-full'>
+            <div className='min-w-[50%]  h-full'>
                 <div className='sticky top-0 bg-[#011627]/70 backdrop-blur-md'>
                     <div className='w-full flex border-b-[1px]  border-[#1E2D3D]'>
                         <button className='flex text-[18px] w-fit border-r-[1px] gap-3 p-3 border-[#1E2D3D]'>{fileOppened} </button>
@@ -151,7 +151,7 @@ export default ProtectedRoute;`
                 </div>
             </div>
 
-            <div id='codeSnippet' className='w-full h-full opacity-0 flex-1 flex flex-col items-center'>
+            <div id='codeSnippet' className=' border-l-[1px] border-[#1E2D3D] min-w-[50%] h-full sticky top-0 opacity-0 flex-1 flex flex-col items-center'>
                 <div className='p-[25.5px] box-border w-full border-b-[1px] border-[#1E2D3D]'></div>
                 <CodeSnippet codeString={codeString} linkContent={linkContent} />
             </div>

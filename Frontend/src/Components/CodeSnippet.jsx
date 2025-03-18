@@ -46,7 +46,7 @@ const CodeSnippet = ({codeString, linkContent}) => {
             <SyntaxHighlighter
                 language='javascript'
                 style={oneDark}
-                customStyle={{width: "100%", fontSize: "12.3px", backgroundColor: "#011221"}}
+                customStyle={{maxWidth: "450px", fontSize: "12.3px", backgroundColor: "#011221", minWidth: "450px", overflowX: "auto", whiteSpace: "pre"}}
             >
                 
                 {codeString}
