@@ -6,7 +6,7 @@ import myImageSrc from "../Images/myImage.jpg"
 import reactAuthThumbnail from "../Images/lock.jpg"
 import jwtBlogData from "./jwt-blog.md?raw"
 import jwtLogoThumbnail from "../Images/Jwt-logo.png"
-import codeTogetherLogo from "../Images/codeTogetherLogo.png"
+import codeTogetherLogo from "../Images/CodeTogetherLogo.png"
 import typingManiaThumbnail from "../Images/TypingManiaLogo.png"
 import ExecuConnectLogoThumbnail from "../Images/ExecuConnectLogo.png"
 

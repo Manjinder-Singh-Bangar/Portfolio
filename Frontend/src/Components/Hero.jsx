@@ -34,6 +34,9 @@ const Hero = () => {
   const foodParentRef = useRef()
 
   useEffect(() => {
+    if(window.innerWidth <= 1024){
+      setIsGameSkipped(true)
+    }
     const handleResize = () => {
       setIsGameSkipped(window.innerWidth <= 1024);
     };
