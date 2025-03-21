@@ -53,14 +53,14 @@ const Navbar = () => {
   ]
 
   return (
-    <nav ref={navRef} className={`text-[#607B96] h-full xs:flex-col lg:flex-row z-10 sticky top-[0] border-b-2 bg-[#011627]/70 backdrop-blur-md ${isNavbarOpened ? "" : "h-fit"} border-[#1E2D3D] w-full flex justify-between`}>
+    <nav ref={navRef} className={`text-[#607B96] xs:p-0 h-full xs:flex-col lg:flex-row z-10 sticky top-[0] border-b-2 bg-[#011627]/70 backdrop-blur-md ${isNavbarOpened ? "" : "h-fit"} border-[#1E2D3D] w-full flex justify-between`}>
 
         <div className='flex xs:p-6 lg:p-0 xs:border-b-[1px] xs:border-[#1E2D3D] lg:border-b-none justify-between'>
           <p className='w-56 lg:p-3 lg:border-r-2 border-[#1E2D3D]'>Manjinder Singh</p>
           <img onClick={handleHamburgerClicked} className='xs:block lg:hidden' src={isNavbarOpened ? crossSvgSrc : hamburgerSvgSrc} alt="hamburger" />
         </div>
         
-        <ul className={`xs:flex-col lg:justify-between absolute xs:w-screen lg:h-fit xs:h-screen top-[74.4px] bg-[#011627] transition-all lg:w-full lg:flex-row duration-300 flex ${isNavbarOpened ? "" : "mobileNavHidden"}`}>
+        <ul className={`xs:flex-col lg:justify-between absolute xs:w-screen lg:top-0 lg:relative lg:z-10 lg:opacity-100 lg:h-fit xs:h-screen top-[74.4px] bg-[#011627] transition-all lg:w-full lg:flex-row duration-300 flex ${isNavbarOpened ? "" : "mobileNavHidden"}`}>
           <div className={`flex lg:flex-row xs:flex-col transition-all items-center`}>
             {
               linkContent.map((item, index) =>{

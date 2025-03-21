@@ -26,7 +26,7 @@ const CodeSnippet = ({codeString, linkContent}) => {
     
     return (
     <div className='flex flex-1 flex-col justify-center w-full p-6'>
-        <div className='flex justify-between gap-3'>
+        <div className='flex justify-normal w-[450px] gap-3'>
             <div className='flex gap-3'>
                 <img className='w-[40px] rounded-full h-[40px]' src={myImageSrc} alt="I am playing chess" />
                 <div>
@@ -34,7 +34,7 @@ const CodeSnippet = ({codeString, linkContent}) => {
                     <p className='shrink text-[14px]'>created at 03-09-2025</p>
                 </div>
             </div>
-            <div className='flex gap-3'>
+            <div className='flex ml-auto gap-3'>
                 {
                     linkContent.map((item) =>{
                         return (<Link to={item.address} className='flex items-center gap-3'><img className='w-[18px]' src={item.icon} alt="details icon" />{item.text}</Link>)

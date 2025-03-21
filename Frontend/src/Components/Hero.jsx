@@ -172,7 +172,7 @@ const customStyle = {
   },[foodConsumed])
 
   return (
-    <main className='w-full gap-[-8px] flex items-center lg:overflow-hidden min-h-[calc(100vh-104.2px)]'>
+    <main className='w-full gap-[-8px] flex items-center xs:overflow-hidden xs:h-[calc(100vh-148px)] lg:overflow-hidden lg:h-[calc(100vh-104.2px)]'>
       <div className='relative gap-10 xs:flex-col flex lg:flex-row w-full flex-1 justify-center h-full p-6 items-center'>
         <div className='text-[#607B96] w-full flex-wrap flex flex-col gap-5'>
           <div className='flex flex-col gap-0 lg:items-end xs:items-start'>
@@ -220,9 +220,7 @@ const customStyle = {
                     <p className='text-white'>// arrows to play</p>
                     <div className='grid grid-rows-2 grid-cols-3'>
                       <button className='col-span-3 relative h-fit'><img className='mx-auto absolute translate-x-[213%] translate-y-[-4px] top-[15px] py-5 rounded-md  p-3 bg-[#010C15]  rotate-[90deg]' src={arrowSvgSrc} alt="" /></button>
-                      <button><img className='mx-auto px-5 p-3 rounded-md bg-[#010C15]' src={arrowSvgSrc} alt="arrow" /></button>
-                      <button><img className='rotate-[-90deg] py-5 px-3.5 rounded-md bg-[#010C15] mx-auto' src={arrowSvgSrc} alt="arrow" /></button>
-                      <button><img className='rotate-[180deg] px-5 py-3 rounded-md bg-[#010C15] mx-auto' src={arrowSvgSrc} alt="arrow" /></button>
+                      <button><img className='mx-auto px-5 p-3 rounded-md bg-[#010C15]' src={arrowSvgSrc} alt="arrow" /></button> <button><img className='rotate-[-90deg] py-5 px-3.5 rounded-md bg-[#010C15] mx-auto' src={arrowSvgSrc} alt="arrow" /></button> <button><img className='rotate-[180deg] px-5 py-3 rounded-md bg-[#010C15] mx-auto' src={arrowSvgSrc} alt="arrow" /></button>
                     </div>
                   </div>
                   <div className='p-3 grid gap-3'>

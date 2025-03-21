@@ -151,7 +151,7 @@ export default ProtectedRoute;`
                 </div>
             </div>
 
-            <div id='codeSnippet' className=' border-l-[1px] border-[#1E2D3D] min-w-[50%] h-full sticky top-0 opacity-0 flex-1 flex flex-col items-center'>
+            <div id='codeSnippet' className=' border-l-[1px] border-[#1E2D3D] h-full sticky top-0 opacity-0 flex-1 flex flex-col items-center'>
                 <div className='p-[25.5px] box-border w-full border-b-[1px] border-[#1E2D3D]'></div>
                 <CodeSnippet codeString={codeString} linkContent={linkContent} />
             </div>

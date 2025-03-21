@@ -316,6 +316,27 @@ code{
   position: absolute;
   z-index: -1;
   transition: all 400ms ease-in-out;
-  top: -580px;
+  top: -800px;
+  // opacity: 0;
+}
+
+.card{
   opacity: 0;
+}
+
+/* For Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #1E2D3D, #1E2D3D); /* Gradient scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #141e29, #1E2D3D); /* Darker gradient on hover */
 }
