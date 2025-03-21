@@ -26,7 +26,7 @@ const CodeSnippet = ({codeString, linkContent}) => {
     
     return (
     <div className='flex flex-1 flex-col justify-center w-full p-6'>
-        <div className='flex justify-normal w-[450px] gap-3'>
+        <div className='flex justify-normal w-[450px] profileTag gap-3'>
             <div className='flex gap-3'>
                 <img className='w-[40px] rounded-full h-[40px]' src={myImageSrc} alt="I am playing chess" />
                 <div>
@@ -42,11 +42,11 @@ const CodeSnippet = ({codeString, linkContent}) => {
                 }
             </div>
         </div>
-        <div className='w-fit h-fit'>
+        <div className='w-fit aboutCodeContainer h-fit'>
             <SyntaxHighlighter
                 language='javascript'
                 style={oneDark}
-                customStyle={{maxWidth: "450px", fontSize: "12.3px", backgroundColor: "#011221", minWidth: "450px", overflowX: "auto", whiteSpace: "pre"}}
+                customStyle={{fontSize: "12.3px", backgroundColor: "#011221", overflowX: "auto", whiteSpace: "pre"}}
             >
                 
                 {codeString}

@@ -182,8 +182,8 @@ const customStyle = {
           </div>
 
           <div className='flex flex-col lg:items-end xs:items-start'>
-            <p className='text-[#607B96] text'>// complete the game to continue</p>
-            <p className='text-[#607B96] text'>// you can also skip it if you do not want to play</p>
+            <p className='text-[#607B96] xs:hidden lg:block text'>// complete the game to continue</p>
+            <p className='text-[#607B96] xs:hidden lg:block text'>// you can also skip it if you do not want to play</p>
             <p className='flex gap-3 flex-wrap xs:justify-start lg:justify-end'>
               <span className='text-[#4D5BCE] text'>const</span>
               <span className='text-[#43D9AD] text'>githubProfileLink</span>

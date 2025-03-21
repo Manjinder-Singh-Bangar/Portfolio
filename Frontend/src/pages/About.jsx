@@ -108,11 +108,11 @@ export default ProtectedRoute;`
     }, [])
 
     return (
-        <section className='h-[calc(100vh-104.2px)] overflow-x-hidden flex w-full text-[#607B96]'>
-            <div className='border-r-[1px] min-w-[265px] sticky top-0 box-border border-[#1E2D3D] max-w-[50%] h-full'>
+        <section className='h-[calc(100vh-104.2px)] xs:flex-col lg:flex-row overflow-x-hidden flex w-full text-[#607B96]'>
+            <div className='border-r-[1px] xs:relative min-w-[265px] lg:sticky top-0 box-border border-[#1E2D3D] z-30 bg-[#011627] lg:max-w-[50%] xs:w-full lg:w-fit lg:h-full'>
                 <div className={` ${isPersonalInfoOpened ? "pb-6  gap-3 border-b-[1px]" : " gap-0 border-b-0 p-0"} transition-all flex-col h-fit flex border-[#1E2D3D]`}>
                     <button onClick={() => setIsPersonalInfoOpened((prev) => !prev)} className={`flex ${isPersonalInfoOpened ? "text-white" : ""} transition-all bg-[#011627] gap-3 z-10 text-[18px] w-full px-6 py-3 border-b-[1px] border-[#1E2D3D]`}><img className={`${isPersonalInfoOpened ? "rotate-0" : "rotate-[-90deg]"}`} src={arrowFilledSvgSrc} alt="" />personal-info</button>
-                    <div className={`flex transition-all text-[16px] relative ${isPersonalInfoOpened ? "top-[0] opacity-1 z-0 h-fit" : "p-0 opacity-0 top-[-100px] h-0"} flex-col`}>
+                    <div className={`flex transition-all text-[16px] relative ${isPersonalInfoOpened ? "top-[0] opacity-1 z-0 h-fit" : "p-0 opacity-0 top-[-100px] h-0"} lg:w-[400px] flex-col`}>
                         <button onClick={() => setIsBioOpened((prev) => !prev)} className={`flex gap-3 ${isBioOpened ? "text-white" : ""} px-6`}><img className={isBioOpened ? "rotate-[90deg]" : "rotate-0"} src={arrowOutLineSvgSrc} alt="" /><img src={bioSvgSrc} alt="" /> bio</button>
                         <div className={`${isBioOpened ? "h-fit top-0 py-1 " : "h-0 z-[-1] py-0 opacity-0 top-[-100px] "} ml-[20px] px-3 relative transition-all`}>
                             <button onClick={() => toggleHandlerForFileViewing("aboutMe")} className='w-full flex  gap-2 px-3'><img src={fileIconSvgSrc} alt="" />about-me.md</button>
@@ -124,26 +124,26 @@ export default ProtectedRoute;`
 
                         <button onClick={() => setIsEducationOpened((prev) => !prev)} className={`flex p gap-3 ${isEducationOpened ? "text-white" : ""} px-6`}><img className={isEducationOpened ? "rotate-[90deg]" : "rotate-0"} src={arrowOutLineSvgSrc} alt="" /><img src={educationSvgSrc} alt="" /> education</button>
                         <div className={`${isEducationOpened ? " h-fit top-0 py-1 " : "h-0 z-[-1] py-0 opacity-0 top-[-100px] "} ml-[20px] px-3 relative transition-all`}>
-                            <button onClick={() => toggleHandlerForFileViewing("schoolInfo")} className={`w-full flex  gap-2 px-3`}><img src={fileIconSvgSrc} alt="" />school.md</button>
-                            <button onClick={() => toggleHandlerForFileViewing("collegeInfo")} className={`w-full flex  gap-2 px-3`}><img src={fileIconSvgSrc} alt="" />college.md</button>
+                            <button onClick={() => toggleHandlerForFileViewing("schoolInfo")} className={`w-full flex  gap-2 px-3`}><img className='w-[18px] h-[18px]' src={fileIconSvgSrc} alt="" />school.md</button>
+                            <button onClick={() => toggleHandlerForFileViewing("collegeInfo")} className={`w-full flex  gap-2 px-3`}><img className='w-[18px] h-[18px]' src={fileIconSvgSrc} alt="" />college.md</button>
                         </div>
 
                     </div>
                 </div>
-                <div className={` ${isContactOpened ? "pb-6 h-fit gap-3  border-b-[1px]" : "h-fit gap-0 border-b-0 p-0"} transition-all flex-col h-fit flex border-[#1E2D3D]`}>
-                    <button onClick={() => setIsContactOpened((prev) => !prev)} className={`flex transition-all bg-[#011627] gap-3 z-10 text-[18px] ${isContactOpened ? "text-white" : ""} w-full px-6 py-3 border-b-[1px] border-[#1E2D3D]`}><img className={`${isContactOpened ? "rotate-0" : "rotate-[-90deg]"}`} src={arrowFilledSvgSrc} alt="" />contacts</button>
+                <div className={`w-full ${isContactOpened ? "pb-6 h-fit gap-3 relative  border-b-[1px]" : "h-fit xs:absolute lg:relative gap-0 border-b-0 p-0"} transition-all flex-col h-fit flex border-[#1E2D3D]`}>
+                    <button onClick={() => setIsContactOpened((prev) => !prev)} className={`flex transition-all bg-[#011627]  gap-3 z-10 text-[18px] ${isContactOpened ? "text-white" : ""} w-full px-6 py-3 border-b-[1px] border-[#1E2D3D]`}><img className={`${isContactOpened ? "rotate-0" : "rotate-[-90deg]"}`} src={arrowFilledSvgSrc} alt="" />contacts</button>
                     <div className={`flex transition-all gap-3 text-[16px] relative ${isContactOpened ? "top-[0]  opacity-1 h-fit" : "p-0 opacity-0 z-[-1] top-[-100px] h-0"} flex-col`}>
-                        <button className='flex gap-3 px-6'><img src={mailIconSvgSrc} alt="" /> manjinder@manjindersingh.ca</button>
-                        <button className='flex gap-3 px-6'><img src={telephoneIconSvgSrc} alt="" /> +1 437 661 5014</button>
+                        <button className='flex text-[14px] gap-3 px-6'><img className='w-[18px] my-auto h-[18px]' src={mailIconSvgSrc} alt="" /> manjinder@manjindersingh.ca</button>
+                        <button className='flex text-[14px] gap-3 px-6'><img className='w-[18px] my-auto h-[18px]' src={telephoneIconSvgSrc} alt="" /> +1 437 661 5014</button>
                     </div>
                 </div>
 
             </div>
 
             <div className='min-w-[50%]  h-full'>
-                <div className='sticky top-0 bg-[#011627]/70 backdrop-blur-md'>
+                <div className='lg:sticky xs:w-full lg:w-full top-0 bg-[#011627]/70 backdrop-blur-md'>
                     <div className='w-full flex border-b-[1px]  border-[#1E2D3D]'>
-                        <button className='flex text-[18px] w-fit border-r-[1px] gap-3 p-3 border-[#1E2D3D]'>{fileOppened} </button>
+                        <button className='flex text-[18px] lg:w-fit xs:w-full border-r-[1px] gap-3 p-3 border-[#1E2D3D]'>{fileOppened} </button>
                     </div>
                 </div>
                 <div className='p-12 h-[calc(100vh - 156px)]'>
