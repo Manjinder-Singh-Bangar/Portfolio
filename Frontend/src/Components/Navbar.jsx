@@ -53,7 +53,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav ref={navRef} className={`text-[#607B96] xs:p-0 h-full xs:flex-col lg:flex-row z-10 sticky top-[0] border-b-2 bg-[#011627]/70 backdrop-blur-md ${isNavbarOpened ? "" : "h-fit"} border-[#1E2D3D] w-full flex justify-between`}>
+    <nav ref={navRef} className={`text-[#607B96] xs:p-0 h-full xs:flex-col lg:flex-row z-[100] sticky top-[0] border-b-2 bg-[#011627]/70 backdrop-blur-md ${isNavbarOpened ? "" : "h-fit"} border-[#1E2D3D] w-full flex justify-between`}>
 
         <div className='flex xs:p-6 lg:p-0 xs:border-b-[1px] xs:border-[#1E2D3D] lg:border-b-none justify-between'>
           <p className='w-56 lg:p-3 lg:border-r-2 border-[#1E2D3D]'>Manjinder Singh</p>
