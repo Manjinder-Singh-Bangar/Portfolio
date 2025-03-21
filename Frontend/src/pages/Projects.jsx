@@ -18,7 +18,6 @@ const Projects = () => {
     })
   }, [])
   
-  
   return (
   <div className='w-full flex xs:flex-col lg:flex-row lg:h-[calc(100vh-104.2px)] xs:overflow-x-hidden lg:overflow-y-hidden text-[#607B96] items-center xs:h-fit'>
     <div className='h-full border-r-[1px] xs:overflow-y-hidden lg:overflow-y-scroll xs:flex-[1] lg:flex-[0.34] border-[#1E2D3D] sticky top-0'>
