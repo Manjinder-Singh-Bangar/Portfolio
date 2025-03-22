@@ -208,6 +208,12 @@ main {
   }
 }
 
+@media (max-width: 1480px) {
+  #blogCard{
+    width: 100%;
+  }
+}
+
 .markdown-container {
   max-width: 800px;
   margin: 0 auto;
