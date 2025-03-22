@@ -160,7 +160,6 @@ const customStyle = {
 
     if (foodParentRef.current && foodParentRef.current.childNodes ) {
     if(foodConsumed.length !== 0){
-      console.log(foodConsumed.length)
       const foodIndex = foodConsumed.length - 1; // Assuming 0-based index
         // console.log(foodIndex)
       if (foodIndex < foodParentRef.current.childNodes.length) {

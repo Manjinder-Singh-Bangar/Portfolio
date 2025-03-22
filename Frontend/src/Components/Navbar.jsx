@@ -15,7 +15,6 @@ const Navbar = () => {
   const handleHamburgerClicked = (e) =>{
     e.preventDefault();
     setIsNavbarOpened((prev) => !prev)
-    console.log(isNavbarOpened)
 
   }
   useGSAP(() =>{
