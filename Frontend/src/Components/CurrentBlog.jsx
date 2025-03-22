@@ -28,7 +28,6 @@ const CurrentBlog = ({
   useEffect(() => {
     console.log(blogLoaded)
       if(blogContentRef.current.childNodes){
-        console.log(blogContentRef.current.childNodes)
         blogContentRef.current.childNodes.forEach((item) => {
           if(item instanceof HTMLElement){
             gsap.to(item, {

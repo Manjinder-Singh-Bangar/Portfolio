@@ -94,7 +94,6 @@ const Board = ({foodEatenCount, isGameOver}) => {
 
         if(isOutOfBounds(nextHeadCoords, board)){
             setGameOver(true)
-            console.log("out of board")
             handleGameOver();
             return;
         }
@@ -183,7 +182,6 @@ const Board = ({foodEatenCount, isGameOver}) => {
         setFoodCell(nextFoodCell);
         if(foodEaten.length >= 10){
             setGameOver(true)
-            console.log(gameOver)
             handleGameOver();
 
         }
@@ -193,7 +191,6 @@ const Board = ({foodEatenCount, isGameOver}) => {
     useEffect(()=>{
         isGameOver(gameOver)
         const snakeLLStartingValue = getStartingSnakeLLValue(board);
-        console.log(snakeLLStartingValue)
         setSnakeCells(new Set());
     },[gameOver])
 
