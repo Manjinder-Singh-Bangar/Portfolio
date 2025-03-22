@@ -214,6 +214,33 @@ main {
   }
 }
 
+@media (max-width: 675px) {
+  #blogCard{
+    
+    #imageContainer{
+
+    
+    }
+
+    div{
+      gap: 8px;
+
+      h1{
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      div{
+
+        div{
+
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
 .markdown-container {
   max-width: 800px;
   margin: 0 auto;
