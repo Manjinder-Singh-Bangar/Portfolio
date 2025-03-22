@@ -21,8 +21,6 @@ const CodeSnippet = ({codeString, linkContent}) => {
     
         }
     }, [])
-
-    console.log(linkContent)
     
     return (
     <div className='flex flex-1 flex-col justify-center w-full p-6'>
