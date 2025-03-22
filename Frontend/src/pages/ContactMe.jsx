@@ -60,7 +60,7 @@ const ContactMe = () => {
 
 
       <div className='lg:h-full xs:h-fit w-full flex flex-col flex-1 text-[#607B96] border-l-[1px] border-[#1E2D3D]'>
-        <div className='w-full h-[51.8px] border-b-[1px] border-[#1E2D3D]'></div>
+        <div className='w-full h-[51.8px] xs:hidden lg:block border-b-[1px] border-[#1E2D3D]'></div>
         
         <div className={`flex p-6 relative items-center justify-center ${formSubmitted ? "h-full w-full justify-center items-center top-0" : "top-[65px]"}`}>
         {

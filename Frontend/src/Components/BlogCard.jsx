@@ -6,9 +6,9 @@ const BlogCard = ({blogThumbnailImageSrc, blogHeading, blogAuthorJob, blogWritte
     
   return (
     
-        <div key={blogKey} id='blogCard' className={`text-[#607B96] border-y-[1px] border-[#1E2D3D] p-8 gap-6 grid grid-cols-4 w-4/6 ${blogClassName}`}>
-            <div id='imageContainer' className='col-span-1 flex items-center'>
-                <img className='w-full' src={blogThumbnailImageSrc} alt="" />
+        <div key={blogKey} id='blogCard' className={`text-[#607B96] border-y-[1px] border-[#1E2D3D] place-content-center p-8 gap-6 grid xs:grid-cols-1 lg:grid-cols-4  w-4/6 ${blogClassName}`}>
+            <div id='imageContainer' className='col-span-1  text-center flex justify-center items-center'>
+                <img className='' src={blogThumbnailImageSrc} alt="" />
             </div>
             <div className='col-span-3 justify-center flex flex-col gap-4'>
                 <h1 className='lg:text-2xl xs:text-xl'>{blogHeading}</h1>
