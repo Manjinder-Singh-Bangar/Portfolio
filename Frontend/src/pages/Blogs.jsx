@@ -23,7 +23,6 @@ const Blogs = () => {
             trigger: item,
             start: "top 70%", // Start later
             end: "bottom 20%",
-            toggleActions: "play reverse play reverse",
           }
         })
       }
