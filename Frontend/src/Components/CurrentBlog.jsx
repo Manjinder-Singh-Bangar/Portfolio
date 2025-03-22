@@ -53,14 +53,14 @@ const CurrentBlog = ({
   }, [])
   
   return (
-    <section className='w-[60%]'>
+    <section className='lg:w-[60%] xs:w-full'>
         <div className='flex w-full text-white flex-col gap-6'>
-            <div className='text-[white] flex gap-3'>
-                <Link to={"/"}>_home</Link>
-                <img src={outLineArrowSvgSrc} alt="" />
-                <Link to={"/blogs"}>_blogs</Link>
-                <img src={outLineArrowSvgSrc} alt="" />
-                <Link to={""}>{currentBlogHeading}</Link>
+            <div className='text-[white] items-center flex gap-3'>
+                <Link className='h-fit' to={"/"}>_home</Link>
+                <img className='h-fit' src={outLineArrowSvgSrc} alt="" />
+                <Link className='h-fit' to={"/blogs"}>_blogs</Link>
+                <img className='h-fit' src={outLineArrowSvgSrc} alt="" />
+                <Link className='h-fit' to={""}>{currentBlogHeading}</Link>
             </div>
 
             <div>

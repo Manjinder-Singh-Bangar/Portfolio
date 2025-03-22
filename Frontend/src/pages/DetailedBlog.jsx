@@ -40,7 +40,7 @@ const DetailedBlog = () => {
     }
 
     return (
-        <section className='w-full flex justify-center py-8 min-h-h-[calc(100vh-104.2px)] max-h-fit'>
+        <section className='w-full flex xs:justify-normal lg:justify-center xs:p-8 lg:px-0 lg:py-8 min-h-h-[calc(100vh-104.2px)] max-h-fit'>
             <CurrentBlog 
                 currentBlogHeading={currentBlog.headingOfBlog} 
                 currentBlogAuthor={currentBlog.author} 
