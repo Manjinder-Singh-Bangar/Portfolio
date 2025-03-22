@@ -65,7 +65,7 @@ const Navbar = () => {
             {
               linkContent.map((item, index) =>{
                 return (
-                  <NavLink key={index} to={item.link} className={({isActive}) => isActive ? `p-3 lg:border-r-2 xs:w-full lg:w-fit transition-all border-b-2 border-b-[#FEA55F] xs:text-start lg:border-r-[#1E2D3D]` : `p-3 lg:border-r-2 xs:text-start xs:border-b-[1px] xs:border-b-[#1E2D3D] xs:w-full lg:w-fit border-r-[#1E2D3D] `}>{item.text}</NavLink>
+                  <NavLink onClick={() => setIsNavbarOpened((prev) => !prev)} key={index} to={item.link} className={({isActive}) => isActive ? `p-3 lg:border-r-2 xs:w-full lg:w-fit transition-all border-b-2 border-b-[#FEA55F] xs:text-start lg:border-r-[#1E2D3D]` : `p-3 lg:border-r-2 xs:text-start xs:border-b-[1px] xs:border-b-[#1E2D3D] xs:w-full lg:w-fit border-r-[#1E2D3D] `}>{item.text}</NavLink>
 
                 )
               })
@@ -73,6 +73,7 @@ const Navbar = () => {
           </div>
         <NavLink 
           to={"contact-me"} 
+          onClick={() => setIsNavbarOpened((prev) => !prev)}
           className={({isActive}) => isActive ? `p-3 transition-all lg:border-l-2 border-[#1E2D3D] border-b-[1px] border-b-[#FEA55F]` : `p-3 xs:border-b-[1px] transition-all xs:border-b-[#1E2D3D] lg:border-l-2 lg:border-l-[#1E2D3D] `}>_contact-me</NavLink>
         </ul>
     </nav>
