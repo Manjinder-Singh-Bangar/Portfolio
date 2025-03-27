@@ -59,7 +59,7 @@ const Navbar = () => {
           <img onClick={handleHamburgerClicked} className='xs:block lg:hidden' src={isNavbarOpened ? crossSvgSrc : hamburgerSvgSrc} alt="hamburger" />
         </div>
         
-        <ul className={`xs:flex-col lg:justify-between absolute xs:w-screen lg:top-0 lg:relative lg:z-10 lg:opacity-100 lg:h-fit xs:h-screen top-[74.4px] bg-[#011627] transition-all lg:w-full lg:flex-row duration-300 flex ${isNavbarOpened ? "" : "mobileNavHidden"}`}>
+        <div className={`xs:flex-col lg:justify-between absolute xs:w-screen lg:top-0 lg:relative lg:z-10 lg:opacity-100 lg:h-fit xs:h-screen top-[74.4px] bg-[#011627] transition-all lg:w-full lg:flex-row duration-300 flex ${isNavbarOpened ? "" : "mobileNavHidden"}`}>
           <div className={`flex lg:flex-row xs:flex-col transition-all items-center`}>
             {
               linkContent.map((item, index) =>{
@@ -74,7 +74,7 @@ const Navbar = () => {
           to={"contact-me"} 
           onClick={() => setIsNavbarOpened((prev) => !prev)}
           className={({isActive}) => isActive ? `p-3 transition-all lg:border-l-2 border-[#1E2D3D] border-b-[1px] border-b-[#FEA55F]` : `p-3 xs:border-b-[1px] transition-all xs:border-b-[#1E2D3D] lg:border-l-2 lg:border-l-[#1E2D3D] `}>_contact-me</NavLink>
-        </ul>
+        </div>
     </nav>
   )
 }
