@@ -13,9 +13,13 @@ import CssSvgSrc from "./css-icon.svg"
 import TailwindCssSvgSrc from "./tailwind-icon.svg"
 import FullCalenderSvgSrc from "./fullCalendarJs-icon.png"
 import TipTapSvgSrc from "./tiptap-icon.svg"
+import LinkedInSvgSrc from "./LinkedInIcon.svg"
+import XSvgSrc from "./X-icon.svg"
 
 
 export {
+    XSvgSrc,
+    LinkedInSvgSrc,
     DockerSvgSrc,
     JavaSvgSrc,
     ReduxSvgSrc,

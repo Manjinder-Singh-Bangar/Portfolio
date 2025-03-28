@@ -187,7 +187,7 @@ const customStyle = {
               <span className='text-[#4D5BCE] text'>const</span>
               <span className='text-[#43D9AD] text'>githubProfileLink</span>
               <span className='text-white text'>=</span>
-              <Link to={"https://github.com/Manjinder-Singh-Bangar"} className='text-[#E99287] text'>https://github.com/Manjinder-Singh-Bangar</Link>
+              <a  href="https://github.com/Manjinder-Singh-Bangar" target='_blank' className='text-[#E99287] text'>https://github.com/Manjinder-Singh-Bangar</a>
             </p>
             <div className='py-6'>
               <Link id='projectsLink' className='bg-[#FEA55F] opacity-0 scale-0 rotate-180 cursor-pointer text-black px-3 py-2 rounded-md hover:bg-transparent hover:text-[#FEA55F] transition-all hover:border-[#FEA55F] hover:border-[1px]' to={"projects"}>_viewProjects</Link>

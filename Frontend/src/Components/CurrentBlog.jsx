@@ -26,7 +26,6 @@ const CurrentBlog = ({
   const [blogContent, setBlogContent] = useState()
 
   useEffect(() => {
-    console.log(blogLoaded)
       if(blogContentRef.current.childNodes){
         blogContentRef.current.childNodes.forEach((item) => {
           if(item instanceof HTMLElement){
