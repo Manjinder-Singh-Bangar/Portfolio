@@ -8,7 +8,9 @@ import Blogs from './pages/Blogs';
 import Projects from './pages/Projects';
 import ContactMe from './pages/ContactMe';
 import DetailedBlog from './pages/DetailedBlog';
+import { inject } from '@vercel/analytics';
 
+inject();
 function App() {
   const [count, setCount] = useState(0)
 
