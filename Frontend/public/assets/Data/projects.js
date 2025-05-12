@@ -99,7 +99,7 @@ const projects = [
             FullCalenderSvgSrc
 
         ],
-        body: "ExecuConnect is a networking platform for executives to connect, share insights, and collaborate. It enables professionals to build meaningful relationships and exchange industry knowledge.",
+        body: "The E-Commerce Store is a full-stack MERN application with JWT authentication, Stripe payment integration, and Zustand for state management. Users can shop products, while admins manage inventory, feature items, and view sales via a secure dashboard.",
         imgSrc: ECommerceStore,
         projectSrc: "/blogs/6",
         thumbnailImageSrc: "",
