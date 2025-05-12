@@ -19,7 +19,7 @@ const Projects = () => {
   }, [])
   
   return (
-  <div className='w-full flex xs:flex-col lg:flex-row lg:h-[calc(100vh-104.2px)] xs:overflow-x-hidden lg:overflow-y-hidden text-[#607B96] items-center xs:h-fit'>
+  <div className='w-full h-full flex xs:flex-col lg:flex-row lg:h-[calc(100vh-100.2px)] overflow-y-hidden text-[#607B96] items-center xs:h-fit'>
     <div className='h-full border-r-[1px] xs:overflow-y-hidden lg:overflow-y-scroll xs:flex-[1] lg:flex-[0.34] border-[#1E2D3D] sticky top-0'>
       <div className={` ${isSkillsOpened ? "pb-6 h-fit gap-3  border-b-[1px]" : "h-[51.8px] gap-0 border-b-0 p-0"} transition-all flex-col flex border-[#1E2D3D]`}>
         <button onClick={() => setIsSkillsOpened((prev) => !prev)} className={`flex transition-all bg-[#011627] gap-3 z-10 text-[18px] ${isSkillsOpened ? "text-white" : ""} w-full px-6 py-3 border-b-[1px] items-center border-[#1E2D3D]`}><img className={`${isSkillsOpened ? "rotate-0" : "rotate-[-90deg]"} w-[12px] h-[12px]`} src={arrowFilledSvgSrc} alt="" />skills</button>
@@ -44,16 +44,18 @@ const Projects = () => {
           </div>
       </div>
     </div>
-    <div className='p-7 lg:flex-[1.5] grid lg:grid-cols-3 xs:grid-cols-1 md:grid-cols-2 md:flex-[1.66] gap-4 '>
-      {
-        projects.map((item) =>{
-          return (
-            <MobileCard tools={item.tools} imageSrc={item.imgSrc} title={item.title} body={item.body} projectSrc={item.projectSrc} />
-          )
+    <div className='p-7 overflow-y-auto flex-1 h-full lg:flex-[1.5] md:flex-[1.66] sticky top-0'>
+      <div className='grid overflow-y-visible lg:grid-cols-3 xs:grid-cols-1 md:grid-cols-2 gap-4'>
+        {
+          projects.map((item) =>{
+            return (
+              <MobileCard live={item.live} tools={item.tools} imageSrc={item.imgSrc} title={item.title} body={item.body} projectSrc={item.projectSrc} />
+            )
 
-       })
+        })
+        }
 
-      }
+      </div>
     </div>
   </div>
 

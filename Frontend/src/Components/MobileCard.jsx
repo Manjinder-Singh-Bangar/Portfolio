@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
-const MobileCard = ({ title, body, projectSrc, imageSrc, tools = [] }) => {
+const MobileCard = ({ title, body, projectSrc, imageSrc, tools = [], live }) => {
   
 
   return (
@@ -20,13 +20,27 @@ const MobileCard = ({ title, body, projectSrc, imageSrc, tools = [] }) => {
       <div className="p-3 flex flex-col gap-3">
         <h1 className="text-[22px] font-bold text-white">{title}</h1>
         <p className="w-full text-[14px] text-gray-300">{body}</p>
-        <Link 
-          to={projectSrc} 
-          className="bg-[#FEA55F] p-3 w-fit text-white transition-all rounded-md 
-          hover:bg-transparent hover:border hover:border-white"
-        >
-          _view_projects
-        </Link>
+        <div className="flex justify-between">
+          <Link 
+            to={projectSrc} 
+            className="bg-[#FEA55F] p-3 w-fit text-white transition-all rounded-md 
+            hover:bg-transparent hover:border hover:border-white"
+          >
+            _view_projects
+          </Link>
+          {
+            live ? (
+            <Link 
+              target="_blank"
+              to={live}
+              className="bg-[#FEA55F] p-3 w-fit text-white transition-all rounded-md 
+              hover:bg-transparent hover:border hover:border-white"
+            >
+              _view_live
+            </Link>
+            ): <></>
+          }
+        </div>
       </div>
     </div>
   );

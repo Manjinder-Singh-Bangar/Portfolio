@@ -3,6 +3,9 @@ import codeTogetherData from "./codeTogetherBlog.md?raw"
 import execuConnectData from "./execuConnect-blog.md?raw"
 import typingManiaData from "./typing-mania-blog.md?raw"
 import jwtBlogData from "./jwt-blog.md?raw"
+import eCommerceStoreData from "./e-commerce-store.md?raw"
+
+import ECommerceStore from "../Images/ECommerceStore.png"
 
 import myImageSrc from "../Images/myImage.jpg"
 import reactAuthThumbnail from "../Images/lock.jpg"
@@ -54,7 +57,8 @@ const blogs = [
         fileName: typingManiaData,
         job: "Full stack developer",
         location: "Toronto",
-        thumbnail: typingManiaThumbnail
+        thumbnail: typingManiaThumbnail,
+        
     },
     {
         id: 5,
@@ -65,8 +69,20 @@ const blogs = [
         fileName: execuConnectData,
         job: "Full stack developer",
         location: "Toronto",
-        thumbnail: ExecuConnectLogoThumbnail
+        thumbnail: ExecuConnectLogoThumbnail,
+    },
+    {
+        id: 6,
+        headingOfBlog: "Full-Stack E-commerce Store with Admin Dashboard",
+        author: "Manjinder Singh",
+        dateWritten: "May 12, 2025",
+        profilePicture: myImageSrc,
+        fileName: eCommerceStoreData,
+        job: "Full stack developer",
+        location: "Toronto",
+        thumbnail: ECommerceStore
     }
+
 
 ]
 

@@ -1,6 +1,7 @@
 import codeTogetherImageSrc from "../Images/CodeTogetherLogo.png"
 import typingMania from "../Images/TypingManiaLogo.png"
 import execuConnect from "../Images/ExecuConnectLogo.png"
+import ECommerceStore from "../Images/ECommerceStore.png"
 import { 
     JSSvgSrc,
     JavaSvgSrc,
@@ -37,7 +38,9 @@ const projects = [
             CssSvgSrc
         ],
         projectSrc: "/blogs/3",
-        thumbnailImageSrc: ""
+        thumbnailImageSrc: "",
+        live: undefined ,
+
     },
     {
         id: 2,
@@ -51,7 +54,9 @@ const projects = [
             CssSvgSrc 
         ],
         projectSrc: "/blogs/4",
-        thumbnailImageSrc: ""
+        thumbnailImageSrc: "",
+        live: undefined ,
+
     },
     {
         id: 3,
@@ -73,7 +78,32 @@ const projects = [
         body: "ExecuConnect is a networking platform for executives to connect, share insights, and collaborate. It enables professionals to build meaningful relationships and exchange industry knowledge.",
         imgSrc: execuConnect,
         projectSrc: "/blogs/5",
-        thumbnailImageSrc: ""
+        thumbnailImageSrc: "",
+        live: undefined ,
+        
+    },
+    {
+        id: 4,
+        title: "E-Commerce Store",
+        tools:[
+            ReactSvgSrc,
+            ReduxSvgSrc,
+            TailwindCssSvgSrc,
+            CssSvgSrc,
+            ExpressJsSvgSrc,
+            NodeJsSvgSrc,
+            JSSvgSrc,
+            MongoDbSvgSrc,
+            JWTSvgSrc,
+            TipTapSvgSrc,
+            FullCalenderSvgSrc
+
+        ],
+        body: "ExecuConnect is a networking platform for executives to connect, share insights, and collaborate. It enables professionals to build meaningful relationships and exchange industry knowledge.",
+        imgSrc: ECommerceStore,
+        projectSrc: "/blogs/6",
+        thumbnailImageSrc: "",
+        live: "https://e-commerce-store-7878.onrender.com" ,
     },
 ]
 
